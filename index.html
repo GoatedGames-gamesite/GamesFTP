@@ -1,0 +1,127 @@
+<!-- Language: HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My GitHub Website</title>
+  <!-- Google Fonts for stylish text -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #24292e;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+    /* Simple Card Layout for Projects */
+    .card {
+      background-color: white;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #24292e;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <div><strong>My GitHub Site</strong></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h1>About Me</h1>
+    <p>Hello! I am a developer passionate about open source and creating beautiful projects. Welcome to my GitHub website!</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="card">
+      <h3>Project 1</h3>
+      <p>Description of your project goes here. You can include GitHub links or screenshots.</p>
+      <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+    </div>
+    <div class="card">
+      <h3>Project 2</h3>
+      <p>Description of another project. Keep it concise and appealing.</p>
+      <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>You can reach me via email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p>Or follow me on GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 My GitHub Website. All rights reserved.
+  </footer>
+
+  <!-- Optional JS for Smooth Scrolling -->
+  <script>
+    // Optional: Highlight current section in nav (simple version)
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('nav a');
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 60) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if(link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
