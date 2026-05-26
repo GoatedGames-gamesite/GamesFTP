@@ -1,2 +1,2 @@
 # GoatedGames2
-GoatedGames Has Many HTML Game Files for anyone to use with adding me or mentioning me
+GoatedGames is a website that will eventully have many games
